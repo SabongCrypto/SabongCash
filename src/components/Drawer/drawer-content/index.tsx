@@ -41,7 +41,7 @@ function NavContent() {
     return (
         <div className="dapp-sidebar">
             <div className="branding-header">
-                <Link href="https://sabong.cash" target="_blank">
+                <Link href="http://localhost:3000">
                     <img alt="" src={SabongLogo} width="150px" height="60px" />
                 </Link>
 

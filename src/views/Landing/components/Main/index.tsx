@@ -11,7 +11,7 @@ function Main() {
                 <img src={SabongRImg} alt="" />
             </div>
             <div className="landing-main-btns-wrap">
-                <Link href="https://app.sabong.cash" target="_blank" rel="noreferrer">
+                <Link href="http://localhost:3000/#/dashboard" target="_blank" rel="noreferrer">
                     <div className="landing-main-btn">
                         <p>Enter App</p>
                     </div>

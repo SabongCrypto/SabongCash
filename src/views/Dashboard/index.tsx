@@ -26,6 +26,13 @@ function Dashboard() {
 
                         <Grid item lg={6} md={6} sm={6} xs={12}>
                             <div className="dashboard-card">
+                                <p className="card-title">Staking APY</p>
+                                <p className="card-value">{isAppLoading ? <Skeleton width="250px" /> : `${new Intl.NumberFormat("en-US").format(Number(trimmedStakingAPY))}%`}</p>
+                            </div>
+                        </Grid>
+
+                        <Grid item lg={6} md={6} sm={6} xs={12}>
+                            <div className="dashboard-card">
                                 <p className="card-title">Market Cap</p>
                                 <p className="card-value">
                                     {isAppLoading ? (
@@ -65,7 +72,7 @@ function Dashboard() {
 
                         <Grid item lg={6} md={6} sm={6} xs={12}>
                             <div className="dashboard-card">
-                                <p className="card-title">TVL</p>
+                                <p className="card-title">Total Value Locked</p>
                                 <p className="card-value">
                                     {isAppLoading ? (
                                         <Skeleton width="250px" />
@@ -78,20 +85,6 @@ function Dashboard() {
                                         }).format(app.stakingTVL)
                                     )}
                                 </p>
-                            </div>
-                        </Grid>
-
-                        <Grid item lg={6} md={6} sm={6} xs={12}>
-                            <div className="dashboard-card">
-                                <p className="card-title">APY</p>
-                                <p className="card-value">{isAppLoading ? <Skeleton width="250px" /> : `${new Intl.NumberFormat("en-US").format(Number(trimmedStakingAPY))}%`}</p>
-                            </div>
-                        </Grid>
-
-                        <Grid item lg={6} md={6} sm={6} xs={12}>
-                            <div className="dashboard-card">
-                                <p className="card-title">Current Index</p>
-                                <p className="card-value">{isAppLoading ? <Skeleton width="250px" /> : `${trim(Number(app.currentIndex), 2)} SAB`}</p>
                             </div>
                         </Grid>
 
@@ -115,7 +108,21 @@ function Dashboard() {
 
                         <Grid item lg={6} md={6} sm={6} xs={12}>
                             <div className="dashboard-card">
-                                <p className="card-title">Backing per $SAB</p>
+                                <p className="card-title">Current Index</p>
+                                <p className="card-value">{isAppLoading ? <Skeleton width="250px" /> : `${trim(Number(app.currentIndex), 2)} SAB`}</p>
+                            </div>
+                        </Grid>
+
+                        <Grid item lg={6} md={6} sm={6} xs={12}>
+                            <div className="dashboard-card">
+                                <p className="card-title">Runway</p>
+                                <p className="card-value">{isAppLoading ? <Skeleton width="250px" /> : `${trim(Number(app.runway), 1)} Days`}</p>
+                            </div>
+                        </Grid>
+
+                        <Grid item lg={6} md={6} sm={6} xs={12}>
+                            <div className="dashboard-card">
+                                <p className="card-title">Backing per SAB</p>
                                 <p className="card-value">
                                     {isAppLoading ? (
                                         <Skeleton width="250px" />
@@ -128,13 +135,6 @@ function Dashboard() {
                                         }).format(app.rfv)
                                     )}
                                 </p>
-                            </div>
-                        </Grid>
-
-                        <Grid item lg={6} md={6} sm={6} xs={12}>
-                            <div className="dashboard-card">
-                                <p className="card-title">Runway</p>
-                                <p className="card-value">{isAppLoading ? <Skeleton width="250px" /> : `${trim(Number(app.runway), 1)} Days`}</p>
                             </div>
                         </Grid>
                     </Grid>

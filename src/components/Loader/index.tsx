@@ -5,7 +5,9 @@ import "./loader.scss";
 function Loader() {
     return (
         <div className="loader-wrap">
-            <CircularProgress size={250} color="inherit" />
+            <div className="loader-circleprogress">
+                <CircularProgress size={100} color="inherit" />
+            </div>
         </div>
     );
 }

@@ -3,11 +3,15 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     color: #eb2323;
     background-color: black;
     background-image: url('../../assets/icons/sabong-loader.png');
     background-position: center;
     background-size: 50%;
     background-repeat: no-repeat;
+    
+    .loader-circleprogress{
+        position: absolute;
+        bottom: 20%;
+    }
 }

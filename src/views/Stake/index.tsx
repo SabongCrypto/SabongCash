@@ -103,7 +103,7 @@ function Stake() {
                     <Grid className="stake-card-grid" container direction="column" spacing={2}>
                         <Grid item>
                             <div className="stake-card-header">
-                                <p className="stake-card-header-title">TIME Staking (🎩, 🎩)</p>
+                                <p className="stake-card-header-title">SAB Staking (3, 3)</p>
                                 <RebaseTimer />
                             </div>
                         </Grid>
@@ -122,7 +122,7 @@ function Stake() {
 
                                     <Grid item xs={6} sm={4} md={4} lg={4}>
                                         <div className="stake-card-tvl">
-                                            <p className="stake-card-metrics-title">TVL</p>
+                                            <p className="stake-card-metrics-title">Total Value Locked</p>
                                             <p className="stake-card-metrics-value">
                                                 {stakingTVL ? (
                                                     new Intl.NumberFormat("en-US", {
@@ -141,7 +141,7 @@ function Stake() {
                                     <Grid item xs={6} sm={4} md={4} lg={4}>
                                         <div className="stake-card-index">
                                             <p className="stake-card-metrics-title">Current Index</p>
-                                            <p className="stake-card-metrics-value">{currentIndex ? <>{trim(Number(currentIndex), 2)} TIME</> : <Skeleton width="150px" />}</p>
+                                            <p className="stake-card-metrics-value">{currentIndex ? <>{trim(Number(currentIndex), 2)} SAB</> : <Skeleton width="150px" />}</p>
                                         </div>
                                     </Grid>
                                 </Grid>
@@ -196,7 +196,7 @@ function Stake() {
                                                                 onChangeStake("stake");
                                                             }}
                                                         >
-                                                            <p>{txnButtonText(pendingTransactions, "staking", "Stake TIME")}</p>
+                                                            <p>{txnButtonText(pendingTransactions, "staking", "Stake SAB")}</p>
                                                         </div>
                                                     ) : (
                                                         <div
@@ -222,7 +222,7 @@ function Stake() {
                                                                 onChangeStake("unstake");
                                                             }}
                                                         >
-                                                            <p>{txnButtonText(pendingTransactions, "unstaking", "Unstake TIME")}</p>
+                                                            <p>{txnButtonText(pendingTransactions, "unstaking", "Unstake SAB")}</p>
                                                         </div>
                                                     ) : (
                                                         <div
@@ -252,17 +252,17 @@ function Stake() {
                                     <div className="stake-user-data">
                                         <div className="data-row">
                                             <p className="data-row-name">Your Balance</p>
-                                            <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(timeBalance), 4)} TIME</>}</p>
+                                            <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(timeBalance), 4)} SAB</>}</p>
                                         </div>
 
                                         <div className="data-row">
                                             <p className="data-row-name">Your Staked Balance</p>
-                                            <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{trimmedMemoBalance} MEMO</>}</p>
+                                            <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{trimmedMemoBalance} sSAB</>}</p>
                                         </div>
 
                                         <div className="data-row">
                                             <p className="data-row-name">Next Reward Amount</p>
-                                            <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{nextRewardValue} MEMO</>}</p>
+                                            <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{nextRewardValue} sSAB</>}</p>
                                         </div>
 
                                         <div className="data-row">

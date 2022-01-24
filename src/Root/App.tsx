@@ -111,9 +111,9 @@ function App() {
                     <Dashboard />
                 </Route>
 
-                <Route exact path="/">
+                {/* <Route exact path="/">
                     <Redirect to="/stake" />
-                </Route>
+                </Route> */}
 
                 <Route path="/stake">
                     <Stake />

@@ -7,7 +7,16 @@ import Loading from "../components/Loader";
 
 function Root() {
     const isApp = (): boolean => {
-        return true; //window.location.host.includes("app");
+        if (
+            window.location.href.includes("dashboard") ||
+            window.location.href.includes("stake") ||
+            window.location.href.includes("mint") ||
+            window.location.href.includes("calculator")
+        ) {
+            return true;
+        } else {
+            return false; //window.location.host.includes("app");
+        }
     };
 
     const [loading, setLoading] = useState(true);
