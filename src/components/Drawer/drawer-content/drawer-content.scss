@@ -3,6 +3,7 @@
   min-width: 280px;
   display: flex;
   flex-direction: column;
+  background-color: #041b1c;
 
   .branding-header {
     display: flex;
@@ -10,7 +11,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 20px 0 63px 0;
+    margin: 30px 0 50px 0;
 
     .wallet-link {
       margin: 10px;
@@ -18,7 +19,7 @@
       p{
         font-family: Montserrat SemiBold;
         font-size: 14px;
-        color: #FFFFFF;
+        color: #D3EBEA;
       }
     }
   }
@@ -54,7 +55,7 @@
           p{
             font-weight: 600;
             font-size: 16px;
-            color: #FFFFFF;
+            color: #E7E2C2;
             font-family: Montserrat SemiBold;
           }
         }
@@ -101,6 +102,7 @@
 
   .dapp-menu-doc-link{
     margin-top: auto;
+    background-color: #041b1c;
     
     a {
       display: flex;
@@ -121,7 +123,7 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 20px;
-        color: #FFFFFF;
+        color: #E7E2C2;
       }
     }
   }
@@ -131,7 +133,8 @@
     flex-flow: row;
     justify-content: space-evenly;
     padding: 1.3rem;
-    a {
+    background-color: #041b1c;
+  a {
       &:hover {
         transform: scale(1.1);
       }

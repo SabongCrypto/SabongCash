@@ -6,6 +6,7 @@ import { DRAWER_WIDTH, TRANSITION_DURATION } from "../../constants/style";
 import MobileDrawer from "../Drawer/mobile-drawer";
 import Drawer from "../Drawer";
 import { cubesImage } from "src/constants/img";
+import SabongIcon from "../../assets/icons/sabongr-icon.png";
 import Messages from "../Messages";
 
 interface IViewBaseProps {
@@ -63,14 +64,9 @@ function ViewBase({ children }: IViewBaseProps) {
                 </Hidden>
             </div>
             <div className={`${classes.content} ${isSmallerScreen && classes.contentShift}`}>
-                {!isSmallerScreen && (
-                    <div className="cubes-top">
-                        <p>{cubesImage}</p>
-                    </div>
-                )}
                 {!isSmallScreen && (
                     <div className="cubes-bottom">
-                        <p>{cubesImage}</p>
+                        <img alt="" src={SabongIcon} />
                     </div>
                 )}
                 {children}
